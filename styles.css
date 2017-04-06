@@ -1,0 +1,47 @@
+#wrapper,header,#head,#btns,button,.tile{box-sizing: border-box;margin: 0;padding: 0;}
+#head{
+	text-align: center;
+	font-size: 16pt;
+}
+#btns{
+	width:100%;
+	margin: 6px auto 10px 5px;
+}
+.bnt{
+	width: 30%;
+	min-height: 50px;
+	margin: 3px;
+	display: inline-block;
+	vertical-align: top;
+
+}
+main{
+	width: 100%;
+}
+.tile{
+	width: 99.9%;
+	min-height: 300px;
+	box-shadow: 0px 0px 4px black;
+	margin: 11px auto 10px auto;
+	padding: 5px;
+	padding-bottom: 0px;
+	background-size: cover;
+
+
+}
+.tile a{
+	text-decoration: none;
+	color:white;
+	font-size: 16pt;
+	text-shadow: 0px 0px 4px black, 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+}
+.tile p{
+	color:white;
+	    text-shadow: 0px 0px 3px black, 1px 1px 4px black, -1px -1px 5px black, -1px 1px 5px black, 1px -1px 5px black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-top: 55%;
+}

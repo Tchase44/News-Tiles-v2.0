@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="wrapper" ng-app="myApp"  ng-controller="myCtrl">
+    <header>
+        <div id="head">All Your News, One Place.
+            <a id="tt" href="https://newsapi.org">Powered by NewsAPI.org</a>
+        </div>
+        <div id="btns">
+<!-- <button id="tfz" class="bnt">Trump Free Zone</button> -->
+			<button ng-click="loadNewsTog('business-insider')" class="bnt">Business Insider</button>
+			<button ng-click="loadNewsTog('the-economist')" class="bnt">The Economist</button>
+			<button ng-click="loadNewsTog('fortune')" class="bnt">Fortune</button>
+			<button ng-click="loadNews('independent')" class="bnt">The Independent</button>
+			<button ng-click="loadNewsTog('associated-press')" class="bnt">AP</button>
+			<button ng-click="loadNewsTog('newsweek')" class="bnt">NewsWeek</button>
+			<button ng-click="loadNews('cnbc')" class="bnt">CNBC</button>
+			<button ng-click="loadNews('the-wall-street-journal')" class="bnt">The Wall Street Journal</button>
+			<button ng-click="loadNews('bloomberg')" class="bnt">Bloomberg</button>
+        </div>
+    </header>
+    <main>
+	<div ng-repeat="x in myStory.articles"> 
+    	<div class="tile" style="background-image: url({{x.urlToImage}})">
+  		   <a target="_blank" href="{{x.url}}">{{x.title}}</a>
+  		   <p>{{x.description}}</p>
+    	</div>
+	</div>
+	</main>
+</div>
+<script type="text/javascript" src="js/app.js"></script>
+<!-- <script type="text/javascript" src="js/clicky.js"></script> -->
+</body>
+</html>
